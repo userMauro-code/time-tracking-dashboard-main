@@ -1,0 +1,131 @@
+:root {
+    --color-primarioPurpura600: hsl(246, 80%, 60%);
+    --color-primarioNaranja300:  hsl(15, 100%, 70%);
+    --color-primarioAzul300: hsl(195, 74%, 62%);
+    --color-primarioRosa400: hsl(348, 100%, 68%);
+    --color-primarioVerde400: hsl(145, 58%, 55%);
+    --color-primario700: hsl(264, 64%, 52%);
+    --color-primarioAmarillo300: hsl(43, 84%, 65%);
+
+    --color-neutralMarina950: hsl(226, 43%, 10%);
+    --color-neutralMarina900: hsl(235, 46%, 20%);
+    --color-neutralPurpura500: hsl(235, 45%, 61%);
+    --color-neutralMarina200: hsl(236, 100%, 87%);
+}
+
+html {
+    font-family: "Rubik";
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-neutralMarina950);
+}
+
+.main__container {
+    padding: 1em;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.card__principal {
+    max-width: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primarioPurpura600);
+    background-color: var(--color-neutralMarina900);
+    border-radius: 1em;
+}
+
+.card__principal  img {
+    height: 3em;
+    border-radius: 100%;
+    border: 3px solid var(--color-neutralMarina200);
+}
+
+.box__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 1.8em 1em;
+    background-color: var(--color-primarioPurpura600);
+    border-radius: 1em;
+}
+
+.box__top h1,p {
+    color: var(--color-neutralMarina200);
+    font-weight: 300;
+}
+
+
+
+.box__botton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--color-neutralMarina200);
+    padding: 1em 0;
+}
+
+
+.card {
+    background-color: var(--color-primarioNaranja300);
+    max-width: 100%;
+    width: 95%;
+    border-radius: 1em;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    height: 10em;
+    overflow: hidden;
+}
+
+.card > .icon {
+    align-self: flex-end;
+    margin-right: 1em;
+    position: absolute;
+    top: -.5em;
+}
+
+.card__content {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    border-radius: 1em;
+    background-color: var(--color-neutralMarina900);
+    color: #fff;
+    padding: .6em 0;
+}
+
+.card__content > .top, .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    padding: 0 1em;
+    align-items: center;
+}
+
+.top img {
+    height: .3em;
+}
+
+.top h3 {
+    font-weight: 400;
+}
+
+.bottom > .hrs{
+    font-size: 1.8em;
+}
