@@ -80,7 +80,7 @@ body {
 
 
 .card {
-    background-color: var(--color-primarioNaranja300);
+    
     max-width: 100%;
     width: 95%;
     border-radius: 1em;
@@ -128,4 +128,85 @@ body {
 
 .bottom > .hrs{
     font-size: 1.8em;
+}
+
+.card__work {
+    background-color: var(--color-primarioNaranja300);
+}
+
+.card__play {
+    background-color: var(--color-primarioAzul300);
+}
+
+.card__study {
+    background-color: var(--color-primarioRosa400);
+}
+
+.card__exercise {
+    background-color: var(--color-primarioVerde400);
+}
+
+.card__social {
+    background-color: var(--color-primario700);
+}
+
+.card__self {
+    background-color: var(--color-primarioAmarillo300);
+}
+
+@media(min-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main__container {
+        max-width: 1444px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr;
+    }
+
+    .card__principal {
+        grid-row: 1/3;
+        height: 100%;
+    }
+
+    .card__content {
+        height: 8em;
+    }
+
+    .card .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .box__top {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: 70%;
+    }
+
+    .box__top  h1 {
+        width: 40%;
+    }
+
+    .box__botton {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1em;
+    }
+
+    .box__botton button {
+        background-color: inherit;
+        border: none;
+        color: #fff;
+        padding-left: 1em;
+    }
 }
