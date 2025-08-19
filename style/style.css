@@ -63,9 +63,26 @@ body {
     border-radius: 1em;
 }
 
-.box__top h1,p {
+.box__top h1 {
     color: var(--color-neutralMarina200);
     font-weight: 300;
+}
+
+.box__top p {
+    font-size: .8em;
+    color: var(--color-neutralMarina200);
+}
+
+.box__botton button {
+    border: none;
+    background-color: inherit;
+    color: var(--color-neutralMarina200);
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.box__botton button:focus {
+    color: #fff;
 }
 
 
@@ -124,6 +141,7 @@ body {
 
 .top h3 {
     font-weight: 400;
+    font-size: .9em;
 }
 
 .bottom > .hrs{
@@ -152,6 +170,20 @@ body {
 
 .card__self {
     background-color: var(--color-primarioAmarillo300);
+}
+
+@media(min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__container {
+        max-width: 800px;
+        padding: 0 4em;
+    }
 }
 
 @media(min-width: 900px) {
@@ -204,9 +236,6 @@ body {
     }
 
     .box__botton button {
-        background-color: inherit;
-        border: none;
-        color: #fff;
         padding-left: 1em;
     }
 }
