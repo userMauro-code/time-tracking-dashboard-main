@@ -8,26 +8,41 @@
 // });
 
 let json;
-
+const buttons = document.querySelectorAll(".box__botton button"); 
 
 fetch('/data.json')
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
+        // console.log(data);
+        json = data;
         updateUI(data, "daily");
     });
 
 function updateUI(data, timeframe) {
     const cards = document.querySelectorAll(".card")
-    console.log("voy a actualizar la UI con: ", timeframe);
+    // console.log("voy a actualizar la UI con: ", timeframe);
 
-    data.forEach(item => {
-        const currentE1 = cards[index].document.querySelector(".hrs");
+    data.forEach((item, index)=> {
+        const currentE1 = cards[index].querySelector(".hrs");
         const previusE1 = cards[index].querySelector(".previo");
 
-        console.log(item.title, item.timeframes[timeframe]);
+        // console.log(item.title, item.timeframes[timeframe]);
 
-        currentE1.texContent = `${item.timeframes[timeframe].current} hrs`;
+        currentE1.textContent = `${item.timeframes[timeframe].current} hrs`;
+        previusE1.textContent = `Previus - ${item.timeframes[timeframe].previous} hrs`;
     });
 };
 
+
+// captura de boton ---------------------
+
+buttons.forEach(button  => {
+    button.addEventListener('click', (event) => {
+    //    console.log(`hiciste click en el boton ${button.textContent}`); 
+    const timeframe = event.target.dataset.time;
+    // console.log("cambiar vista a ", timeframe);
+
+    updateUI(json, timeframe)
+    });
+    
+});

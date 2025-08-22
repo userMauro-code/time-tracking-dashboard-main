@@ -35,6 +35,7 @@ body {
     align-items: center;
     margin-top: 2em;
     gap: 1em;
+    position: relative;
 }
 
 .card__principal {
@@ -172,6 +173,10 @@ body {
     background-color: var(--color-primarioAmarillo300);
 }
 
+.attribution {
+   display: none;
+}
+
 @media(min-width: 600px) {
     body {
         display: flex;
@@ -183,6 +188,10 @@ body {
     .main__container {
         max-width: 800px;
         padding: 0 4em;
+    }
+
+    .attribution {
+        bottom: 0;
     }
 }
 
